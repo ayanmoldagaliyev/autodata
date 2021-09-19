@@ -28,12 +28,22 @@ router.get('/search', (req, res) => {
 router.post('/create', async (req, res) => {
     const embrace = new Embrace({
         title: req.body.title,
+        description: req.body.description,
         imageUrl: req.body.imageUrl,
         price: req.body.price
     })
 
     await embrace.save()
     res.redirect('/')
+})
+
+router.post('/embrace', async (req, res) => {
+    const embrace = await Embrace.findById(req.body.id)
+    res.render('embrace', {
+        title: 'Current Embrace',
+        isSearch: true,
+        embrace
+    })
 })
 
 module.exports = router

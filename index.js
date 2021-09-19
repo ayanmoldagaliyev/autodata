@@ -28,7 +28,7 @@ app.use(AutoDataRoutes)
 
 async function start() {
     try {
-        await mongoose.connect('mongodb+srv://ayan:ficken042099@cluster0.yt4w4.mongodb.net/myFirstDatabase', {
+        await mongoose.connect('mongodb+srv://ayan:wXYx4FK2vT5bvomF@cluster0.yt4w4.mongodb.net/myFirstDatabase', {
             useNewUrlParser: true
         })
         app.listen(PORT, () => {
