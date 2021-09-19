@@ -1,0 +1,23 @@
+<h1>
+	Embrace
+	<span class="span">
+		#{{embrace._id}}
+	</span>
+</h1>
+
+{{#if embrace}}
+<h2>{{ embrace.title }}</h2>
+<div class="row">
+	<div class="col s6">
+		<img width="100%" src="{{embrace.imageUrl}}" alt="Car">
+	</div>
+	<div class="col s6">
+		<p class="hidden">{{ embrace.description }}</p>
+		<br>
+		<span>{{ embrace.price }}</span>
+		<button class="btn">Buy</button>
+	</div>
+</div>
+{{else}}
+<p>Not found</p>
+{{/if}}
